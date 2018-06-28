@@ -1,0 +1,137 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0px;
+    background-image: url('img/blue_car.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Header Styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+header .left-content img {
+    width: 100px;
+    margin-left: 20px;
+}
+
+header > * {
+    display: inline-block;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline;
+    font-size: .9em;
+    color: white;
+    font-weight: 480;
+    margin: 10px;
+}
+
+
+header .right-content {
+    margin-right: 10px;
+}
+
+header .right-content {
+    float: right;
+}
+
+/* Content Styles */
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper .title {
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 8px;
+    padding: 20px 150px;
+    margin-top: 80px;
+}
+
+.content-wrapper h1 {
+     text-align: center;
+     color: white;
+     font-weight: 400;
+ }
+
+.content-wrapper #home-buttons {
+    text-align: center;
+ }
+
+.content-wrapper button {
+    background-color: rgba(0, 0, 0, .7);
+    border: 1px solid transparent;
+    color: white;
+    padding: 15px 30px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.content-wrapper button:hover {
+    border: 1px solid white;
+}
+
+.content-wrapper button:focus {
+    outline: none;
+}
+
+.content-wrapper .newsletter {
+     text-align: center;
+     margin: 15px;
+ }
+
+.content-wrapper .newsletter a {
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+ }
+
+ /* Footer Styles */
+
+ .footer-wrapper {
+     display: flex;
+     justify-content: center;
+     background-color: rgba(0, 0, 0, .4);
+     align-content: center;
+     position: absolute;
+     bottom: 0px;
+     width: 100%;
+ }
+
+ .footer-wrapper ul li {
+    display: inline-block;
+    list-style-type: none;
+    color: white;
+    font-size: 13px;
+    margin: 5px;
+ }
+
+ .footer-wrapper ul li img {
+    width: 20px;
+    position: relative;
+    top: 4px;
+ }
+
+ .footer-wrapper ul .fa-circle {
+     color: white;
+     font-size: 4px;
+     position: relative;
+     bottom: 3px;
+ }

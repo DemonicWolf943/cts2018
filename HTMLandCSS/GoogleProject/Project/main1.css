@@ -1,0 +1,128 @@
+html {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 50px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
+header {
+    grid-column: 1/-1;
+}
+
+header .left-header-buttons {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+header .right-header-buttons {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+a {
+    padding: 23px 5px 15px 23px;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    opacity: .75;
+}
+
+header .right-header-buttons button {
+    font-weight: bold;
+    outline: none;
+    background: #4387fd;
+    border: 1px solid #4285f4;
+    color: white;
+    border-radius: 2px;
+    height: 30px;
+    width: 70px;
+    margin: 0px 50px 0px 28px;
+}
+
+.content-wrapper {
+    grid-column: 1/-1;
+    grid-row: 2;
+    justify-self: center;
+    
+}
+
+.content-wrapper .search-logo {
+    text-align: center;
+}
+
+.content-wrapper .search-bar-wrapper {
+    text-align: center;
+
+}
+
+.content-wrapper .search-bar-wrapper input {
+    height: 44px;
+    width: 568px;
+    box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.content-wrapper .search-bar-wrapper input[type='text'] {
+    font-size: 16px;
+    text-indent: 16px;
+}
+
+.content-wrapper .search-bar-wrapper input:focus {
+    box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.content-wrapper .search-bar-wrapper input:hover {
+    box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.content-wrapper .search-bar-wrapper button {
+    height: 36px;
+    line-height: 26px;
+    border: 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+    margin-top: 32px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 2px;
+    color: #757575;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.content-wrapper .search-bar-wrapper button:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+    color: black;
+}
+
+footer {
+    grid-column: 1/-1;
+    grid-row: 3;
+    background: #f2f2f2;
+    width: 100vw;
+}
+
+footer .left-footer-buttons {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+footer .right-footer-buttons {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+

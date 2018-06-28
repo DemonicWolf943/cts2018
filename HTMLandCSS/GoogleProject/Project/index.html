@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+
+<head>
+	<meta charset = 'UTF-8'>
+	<title>Google</title>
+	<link href = 'main1.css' rel = 'stylesheet' type = 'text/css'> 
+</head>
+
+<body>
+<header>
+	<div class="left-header-buttons">
+		<a href = '#'>About</a>
+		<a href = '#'>Store</a>
+	</div>
+
+	<div class="right-header-buttons">
+		<a href = '#'>Gmail</a>
+		<a href = '#'>Images</a>
+		<button type = 'button'>Sign in</button>
+	</div>
+</header>
+
+<div class="content-wrapper">
+	<div class="search-logo">
+		<img src = 'img/google.png'>
+	</div>
+
+	<div class="search-bar-wrapper">
+		<input type = 'text' id = 'search-box'>
+		<div class="search-bar-buttons">
+			<button type = 'button'>Google Search</button>
+			<button type = 'button'>I'm Feeling Lucky</button>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="left-footer-buttons">
+		<a href = '#'>Advertising</a>
+		<a href = '#'>Business</a>
+	</div>
+
+	<div class="right-footer-buttons">
+		<a href = '#'>Privacy</a>
+		<a href = '#'>Terms</a>
+		<a href = '#'>Settings</a>
+		</div>
+</footer>
+</body>
+
+<script>
+	function focusSearchBox() {
+		document.getElementById('search-box').focus();
+	}
+
+	onload = focusSearchBox();
+</script>
+
+</html>

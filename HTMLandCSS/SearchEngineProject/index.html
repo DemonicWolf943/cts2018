@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+
+<head>
+  <meta charset = 'UTF-8'>
+  <title>Search Engine</title>
+  <link href = "https://fonts.googleapis.com/css?family=Lato|PT+Serif" rel = "stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <style>
+    .content_wrapper {
+      font-family: 'Lato', sans-serif;
+      margin: 0px 15%
+    }
+
+    .search_bar_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      position: relative;
+    }
+
+    .search_bar_wrapper img {
+      width: 40%;
+      margin-top: 40px;
+    }
+
+    .search_bar input {
+      margin-top: 10px;
+      width: 50em;
+      height: 4em;
+      box-shadow: 0px 1px 10px 2px lightgray;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .search_bar input[type='text'] {
+      font-size: 24px;
+      font-weight: 700;
+      color: gray;
+      text-indent: 55px;
+ 
+    }
+
+    .search_bar input:focus {
+      outline: none;
+    }
+
+    .search_bar p {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 23px;
+      font-size: 13px;
+      color: gray;
+    }
+
+    .search_bar .fa-search {
+      font-size: 30px;
+      color: gray;
+      position: absolute;
+      padding-top: 35px;
+      padding-left: 15px;
+    }
+  
+    .recent_posts_wrapper {
+      margin-top: 25%;
+    }
+
+    .recent_posts_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .recent_posts {
+      display: flex;
+    }
+
+    .recent_posts p {
+      width: 33%;
+      margin-right: 30px;
+    }
+
+    .recent_posts_wrapper h3 {
+      color: #0079ff
+    }
+
+
+  
+  </style>
+</head>
+
+<body>
+  <div class="content_wrapper">
+    <div class = 'search_bar_wrapper'>
+      <img src = 'img/ds_icon_text_logo.png'>
+
+      <div class="search_bar">
+
+      <span class="fas fa-search"></span>
+
+        <input type = 'text' placeholder = 'Search DailySmarty'>
+        <p>Press return to search</p>
+      </div>
+    </div>
+    
+    <div class="recent_posts_wrapper">
+      <h3>Recent posts</h3>
+      <div class = 'recent_posts'>
+        <p>Guide to rendering points on a Google Map JavaScript 1</p>
+        <p>Guide to rendering points on a Google Map JavaScript 2</p>
+        <p>Guide to rendering points on a Google Map JavaScript 3</p>
+      </div>
+    </div> <!-- End of Recent Posts -->
+
+  </div> <!-- End of Content Wrapper --> 
+
+</body>
+
+<script>
+</script>
+
+</html>

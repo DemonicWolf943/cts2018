@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<body>
+    <input type = 'text' class = 'msgInput'>
+
+    <div>
+        Characters left <span class = 'msgCounter'>144</span>
+    </div>
+</body>
+
+<script>
+    const msgInput = document.querySelector('.msgInput');
+    const msgCounter = document.querySelector('.msgCounter');
+    const max = 20;
+
+    // ensure character count
+    const ensureContentLength = (content, max) => {
+        if (content.length > max) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // event listener watch for keyup
+    msgInput.onkeyup = function() {
+        msgCounter.innerHTML = max - this.value.length;
+
+        if (!ensureContentLength(this.value, (max - 0))) {
+            msgInput.disabled = true;
+        }
+    }
+</script>
+</html>
