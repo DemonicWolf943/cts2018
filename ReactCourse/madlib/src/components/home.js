@@ -14,4 +14,10 @@ class Home extends Component {
   }
 }
 
+// TODO
+// placeholder
+// gray and green number labels
+// genereate btn space/cand-height
+// content labels
+
 export default Home;
