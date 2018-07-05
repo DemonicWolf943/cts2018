@@ -1,7 +1,11 @@
 $color-blue-light: #5496E6;
 $color-blue-dark: #518BDE;
-
 $color-gray-one: #444;
+$color-gray-two: #E6E6E6;
+$color-yellow-one: #F7D754;
+
+$font-roboto: 'Roboto Condensed';
+$font-montserrat: 'Montserrat';
 
 .grid {
     height: 100vh;
@@ -20,9 +24,23 @@ $color-gray-one: #444;
 
         font-size: 18px;
         color: white;
-        font-family: 'Montserrat';
+        font-family: $font-montserrat;
         font-weight: 300;
         line-height: 22px;
-        
+    }
+
+    &__remaining {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+
+        text-align: center;
+        margin-top: 33px;
+
+        color: $color-gray-one;
+        font-family: $font-montserrat;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 27px;
+        text-align: center;
     }
 }

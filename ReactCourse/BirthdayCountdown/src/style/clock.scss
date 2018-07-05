@@ -1,0 +1,41 @@
+.clock {
+    grid-row: 3/4;
+    grid-column: 2/11;
+
+    background-color: $color-gray-one;
+    text-align: left;
+    font-family: $font-roboto;
+    height: 75%;
+    width: 100%;
+    align-self: end;
+    
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
+    -webkit-clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 275px));
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 25px;
+        color: $color-yellow-one;
+    }
+
+    &__amount {
+        font-size: 90px;
+        font-weight: bold;
+        line-height: 85px;
+        color: white;
+    }
+}
