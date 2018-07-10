@@ -1,24 +1,67 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions'
 
 import Icon from '../icon';
 import Arrow from '../arrow';
 import Action from '../action';
 
-export default class LibraryCourse extends Component {
+import AnimateHeight from 'react-animate-height';
+
+class LibraryCourse extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {
+			status: true,
+			height: 0
+		};
+	};
+
+	handleCallback = function (status) {
+		let height = this.state.height == 0 ? 80 : 0;
+		if (!status) {
+			document.getElementById(this.id).classList.add('library-course-selected');
+		} else {
+			document.getElementById(this.id).classList.remove('library-course-selected');
+		}
+		this.setState({ 
+			status, 
+			height
+		})
+	}.bind(this);
+
 	render() {
+		this.id = `library-course-${this.props.id}`
 		return (
-			<div className="library-course">
+			<div id={this.id} className="library-course">
 				<div className="library-course__title-check">
-					<label className="library-course__title">Problem Solving</label>
+					<label className="library-course__title">{this.props.title}</label>
 					{Icon('fas fa-check', 'library-course__icon')}
 				</div>
-				<Arrow className="library-course__arrow" />
-				<Action className="library-course__action" />
-				<div>
-					<label>Course Description</label>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare felis ac ultrices elementum. Fusce placerat vestibulum tellus, sit amet eleifend justo volutpat in. Vestibulum in quam vehicula nibh maximus dictum vel at tortor.</p>
-				</div>
+				<div className="library-course__line"></div>
+				<Arrow
+					callback={status => this.handleCallback(status)}
+					id={this.props.id}
+					className="library-course__arrow"
+				/>
+				<Action
+					id={this.props.id}
+					onClick={() => this.props.toggleEnrolled(this.props.id)}
+					className="library-course__action"
+				/>
+				<AnimateHeight
+					duration = {300}
+					height = {this.state.height}
+				>
+					<div className="library-course__description">
+						<label>Course Description</label>
+						<p>{this.props.description}</p>
+					</div>
+				</AnimateHeight>
 			</div>
-		); 
+		);
 	}
 }
+
+export default connect(null, actions)(LibraryCourse);
