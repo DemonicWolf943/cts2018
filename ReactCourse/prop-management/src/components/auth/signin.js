@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'; 
 
-export default class Signin extends Component {
-	render() {
-		return (
-			<div className="sign-in">
-				...signin
-      </div>
-		);
-	}
+import * as actions from '../../actions';
+
+import SigninForm from './signinForm';
+
+class Signin extends Component {
+
+    onSubmit = (fields) => {
+        this.props.signIn(fields, () => {
+            this.props.history.push('/dashboard');
+        })
+    }
+
+    render() {
+        return (
+            <div className='sign-in'>
+                <SigninForm onSubmit={(event) => this.onSubmit(event)}/>
+            </div>
+        )
+    }
 }
+
+export default connect(null, actions)(Signin);
