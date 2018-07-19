@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import TabNav from './tabnav';
+import NewsletterGrid from "./newsletter/newsletterGrid";
 
 export default class Dashboard extends Component {
 
@@ -12,7 +13,7 @@ export default class Dashboard extends Component {
                 {
                     title: 'Newsletter',
                     active: true,
-                    component: <h4>Hey There - Newsletter</h4>
+                    component: <NewsletterGrid/>
                 },
                 {
                     title: 'Requests',
@@ -23,8 +24,18 @@ export default class Dashboard extends Component {
         }
     }
 
-    handleTabChange = (title) => {
-        console.log('clicked on tab', title);
+    handleTabChange = title => {
+        const tabs = this.state.tabs;
+
+        tabs.map(tab => {
+            if(tab.title == title) {
+                tab.active = true
+            } else {
+                tab.active = false;
+            }
+        })
+
+        this.setState({ tabs });
     }
 
     render() {
