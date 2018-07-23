@@ -34,8 +34,11 @@ function main() {
             <Route path='/signin' component={Signin}/>
             <Route path='/signup' component={Signup}/>
 
-            <Route path='/dashboard' component={requireAuth(Dashboard)}/>
-            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
+            <Route path='/dashboard' component={Dashboard}/>
+            <Route path='/newsletter/new' component={NewNewsletter}/>
+
+            {/* <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/> */}
           </Layout>
         </Switch>
       </Router>
