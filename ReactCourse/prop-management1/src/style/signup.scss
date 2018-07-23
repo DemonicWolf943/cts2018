@@ -1,30 +1,36 @@
-.sign-in {
+.sign-up {
     grid-row: content-s/content-e;
     grid-column: content-s/content-e;
 }
 
-.sign-in-form {
+.sign-up-form {
     display: grid;
     justify-items: center;
+    
     &__title {
         width: 100%;
         margin-top: 6.6rem;
     }
-    &__email {
+    &__fullname {
         margin-top: 7.7rem;
     }
-    &__password {
+    
+    &__unit,
+    &__email,
+    &__password  {
         margin-top: 4rem;
     }
-    &__login {
+
+    &__create-account {
         margin-top: 8.8rem;
     }
     &__text-links {
         margin-top: 5.2rem;
-    }
-
-    &__email, 
-    &__password {
-        transform: translateX(-64.5px);
+        text-decoration: none;
+        color: inherit;
+        :visited {
+            color: inherit;
+        }
+        
     }
 }

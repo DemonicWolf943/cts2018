@@ -3,12 +3,12 @@
     grid-column: latest-s/latest-e;
 
     display: grid;
-    grid-template-rows: [s] 258px [m] 405px [e];
+    grid-template-rows: [s] 25.8rem [m] 40.5rem [e];
     grid-template-columns: [s] 1fr [e];
 
     border: 1px solid $color-gray-E6;
     border-radius: .5rem;
-
+    
     & > * {
         grid-column: s/e;
     }
@@ -39,8 +39,7 @@
             font-size: 1.6rem;
         }
     }
-
-    &__button {
+    &__button{
         grid-row: s/m;
         grid-column: s/e;
         justify-self: end;

@@ -1,5 +1,4 @@
 .newsletter-box {
-
     grid-row: box-s/box-e;
     grid-column: box-s/box-e;
     align-content: center;
@@ -25,16 +24,15 @@
         grid-row: s/m;
         grid-column: s/e;
     }
-
     &__month-year {
         align-self: start;
         font-size: 2rem;
         line-height: 2.3rem;
+        margin-bottom: 1rem;
 
         grid-row: m/e;
         grid-column: s/e;
     }
-
     &__point {
         height: 4rem;
         width: 4rem;
@@ -42,8 +40,8 @@
         grid-row: s/e;
         grid-column: s/e;
 
-        justify-self: end;
         align-self: center;
+        justify-self: end;
 
         transform: translateX(52%) rotate(45deg);
 

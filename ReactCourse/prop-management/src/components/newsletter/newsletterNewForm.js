@@ -5,10 +5,13 @@ import { FormTitle } from "../formTitle";
 import { FormInput, FormButton } from "../formFields";
 import TextLink from "../textLink";
 
-class SigninForm extends Component {
+class NewNewsletterForm extends Component {
   render() {
+
+    const { handleSubmit } = this.props;
+
     return (
-      <form className="sign-in-form">
+      <form onSubmit={handleSubmit} className="sign-in-form">
         <FormTitle className="sign-in-form__title" text="Login" />
         <Field
           className="sign-in-form__email"
@@ -43,8 +46,8 @@ class SigninForm extends Component {
   }
 }
 
-SigninForm = reduxForm({
-  form: "signin"
-})(SigninForm);
+NewNewsletterForm = reduxForm({
+  form: "newnewsletter"
+})(NewNewsletterForm);
 
-export default SigninForm;
+export default NewNewsletterForm;

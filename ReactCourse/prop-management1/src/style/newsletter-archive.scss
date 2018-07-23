@@ -1,12 +1,11 @@
 .newsletter-archive {
     margin-top: 3.85rem;
-
     grid-row: archive-s/archive-e;
     grid-column: archive-s/archive-e;
 
     display: grid;
-    grid-template-rows: [title-s] 2.7rem [title-e items-s] 1fr [items-e]; 
-
+    grid-template-rows: [title-s] 2.7rem [title-e items-s] 1fr [items-e];
+   
     &__title {
         color: $color-red-BA;
         font-size: 1.8rem;
@@ -18,9 +17,7 @@
     }
 }
 
-
 .archive-items {
-    margin-top: 1.6rem;
     display: grid;
     grid-row-gap: 1.6rem;
     grid-template-rows: repeat(auto-fit, 1fr);
@@ -28,15 +25,14 @@
 }
 
 .archive-item {
-
     display: grid;
-    grid-row-gap: 3px;
+    grid-row-gap: .3rem;
 
     &__title {
         font-size: 1.4rem;
         line-height: 1.7rem;
-
         transition: all .2s ease;
+
         &:hover {
             font-size: 1.6rem;
             font-weight: 500;
