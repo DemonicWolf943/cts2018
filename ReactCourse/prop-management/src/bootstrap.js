@@ -36,9 +36,6 @@ function main() {
 
             <Route path='/dashboard' component={Dashboard}/>
             <Route path='/newsletter/new' component={NewNewsletter}/>
-
-            {/* <Route path='/dashboard' component={requireAuth(Dashboard)}/>
-            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/> */}
           </Layout>
         </Switch>
       </Router>
