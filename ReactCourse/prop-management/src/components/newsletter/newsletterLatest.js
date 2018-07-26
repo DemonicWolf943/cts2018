@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Button from '../button';
+import history from '../../history';
 
 class NewsletterLatest extends Component {
 
     handleEdit = () => {
-        this.props.history.push('/newsletter/edit');
+        history.push(`/newsletter/edit/${this.props._id}`);
     }
 
     render() {
@@ -22,4 +23,5 @@ class NewsletterLatest extends Component {
     }
 }
 
+// export default connect(mapStateToProps)(NewsletterLatest);
 export default NewsletterLatest;

@@ -23,6 +23,8 @@ import Signin from './components/auth/signin';
 // DASHBOARD
 import Dashboard from './components/dashboard';
 import NewNewsletter from './components/newsletter/newsletterNew';
+import EditNewsletter from './components/newsletter/newsletterEdit';
+import NewsletterDetail from './components/newsletter/newsletterDetail';
 
 function main() {
   ReactDOM.render(
@@ -36,6 +38,8 @@ function main() {
 
             <Route path='/dashboard' component={Dashboard}/>
             <Route path='/newsletter/new' component={NewNewsletter}/>
+            <Route path='/newsletter/edit/:id' component={EditNewsletter}/>
+            <Route path='/newsletter/detail/:id' component={NewsletterDetail}/>
           </Layout>
         </Switch>
       </Router>
