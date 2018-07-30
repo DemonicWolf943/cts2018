@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import Button from '../button';
+
 import history from '../../history';
 
 class NewsletterLatest extends Component {
@@ -7,7 +9,7 @@ class NewsletterLatest extends Component {
     handleEdit = () => {
         history.push(`/newsletter/edit/${this.props._id}`);
     }
-
+        
     render() {
         const { title, imageUrl, body } = this.props;
         return (
@@ -23,5 +25,4 @@ class NewsletterLatest extends Component {
     }
 }
 
-// export default connect(mapStateToProps)(NewsletterLatest);
 export default NewsletterLatest;

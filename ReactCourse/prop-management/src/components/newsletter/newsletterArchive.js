@@ -7,7 +7,7 @@ import history from '../../history';
 function ArchiveItem({title, date, _id, callback}) {
     return (
         <div className='archive-item archive-items__item'>  
-            <a onClick={() => callback(_id)} className='archive-item__title'>{title}</a>
+            <a onClick={() => callback(_id)}className='archive-item__title'>{title}</a>
             <div className='archive-item__date'>
                 { date.getMonth() + 1 }
                 /
@@ -26,15 +26,10 @@ class NewsletterArchive extends Component {
                 <div className='newsletter-archive__title'>Archive</div>
                 <div className='newsletter-archive__items archive-items'>
                     {/* newsletter items */}
+                    
                     {
                         this.props.newsletters.map(newsletter => {
-                            return (
-                                <ArchiveItem 
-                                    callback={(_id) => history.push(`/newsletter/detail/${_id}`)}
-                                    key={newsletter._id}
-                                    {...newsletter}
-                                />
-                            )
+                            return <ArchiveItem callback={(_id) => history.push(`/newsletter/detail/${_id}`)} key={newsletter._id} {...newsletter}/>
                         })
                     }
                 </div>
@@ -48,6 +43,6 @@ function mapStateToProps(state) {
     return {
         newsletters
     }
-}
+} 
 
-export default connect(mapStateToProps)(NewsletterArchive)
+export default connect(mapStateToProps)(NewsletterArchive);

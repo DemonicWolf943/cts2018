@@ -1,7 +1,5 @@
-.newsletter-box {
 
-    grid-row: box-s/box-e;
-    grid-column: box-s/box-e;
+.requests-box {
     align-content: center;
 
     height: 16rem;
@@ -16,7 +14,7 @@
     grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
     grid-template-columns: [s] 1fr [e];
 
-    &__day {
+    &__count {
         align-self: end;
         font-size: 7rem;
         line-height: 8.1rem;
@@ -26,7 +24,7 @@
         grid-column: s/e;
     }
 
-    &__month-year {
+    &__title {
         align-self: start;
         font-size: 2rem;
         line-height: 2.3rem;
@@ -50,5 +48,36 @@
         border: .15rem solid $color-red-BA;
         border-bottom: none;
         border-left: none;
+    }
+}
+
+
+.requests-box-active {
+    background-color: $color-red-BA;
+    border-color: $color-red-BA;
+
+    .requests-box {
+        &__title,
+        &__count {
+            color: white;
+        }
+        &__point {
+            background-color: $color-red-BA;
+            border-color: $color-red-BA;
+        }
+    }
+}
+
+.requests-box-inactive {
+    border-color: $color-gray-E6;
+
+    .requests-box {
+        &__title,
+        &__count {
+            color: $color-gray-4D;
+        }
+        &__point {
+            display: none;
+        }
     }
 }

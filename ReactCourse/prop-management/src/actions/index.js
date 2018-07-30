@@ -3,14 +3,23 @@ import {
     signIn
 } from './auth';
 
-import {
+import { 
     fetchNewsletters,
     fetchNewsletterWithId
 } from './newsletter';
+
+import {
+    changeSelectedRequestType,
+    createNewRequest,
+    fetchRequests
+} from './requests';
 
 export {
     signUp,
     signIn,
     fetchNewsletters,
-    fetchNewsletterWithId
+    fetchNewsletterWithId,
+    changeSelectedRequestType,
+    createNewRequest,
+    fetchRequests
 };

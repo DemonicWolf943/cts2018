@@ -14,16 +14,18 @@ class NewsletterGrid extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchNewsletters();
+        setTimeout(() => {
+            this.props.fetchNewsletters();
+        }, 1000);
     }
 
     render() {
         return (
             <div className='newsletter-grid'>
                 <Button className='newsletter-grid__button' icon='fas fa-plus' callback={() => this.handleAddNewsletter()}/>
-                <NewsletterBox {...this.props.latestNewsletter}/>
+                <NewsletterBox {...this.props.latestNewsletter} />
                 <NewsletterArchive/>
-                <NewsletterLatest {...this.props.latestNewsletter} />
+                <NewsletterLatest {...this.props.latestNewsletter}/>
             </div>
         )
     }

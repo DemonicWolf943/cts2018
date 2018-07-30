@@ -1,5 +1,6 @@
 import {
-    SET_NEWSLETTERS, FETCH_NEWSLETTER_ID
+    SET_NEWSLETTERS,
+    FETCH_NEWSLETTER_ID
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -10,9 +11,10 @@ const INITIAL_STATE = {
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_NEWSLETTERS:
+            const newsletters = action.payload;
             return {
                 ...state,
-                newsletters: action.payload
+                newsletters
             }
         case FETCH_NEWSLETTER_ID:
             const newsletterID = action.payload;

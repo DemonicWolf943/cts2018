@@ -36,7 +36,6 @@
         padding-left: 2rem;
         font-size: 1.6rem;
         font-weight: 500;
-        font-family: inherit;
     }
 }
 
@@ -48,6 +47,7 @@
         resize: none;
         height: 35.5rem;
         padding-top: 1rem;
+        font-family: inherit;
     }
 }
 
@@ -84,7 +84,6 @@
 }
 
 .form-button-small {
-
     &__button {
         border-radius: 1.6rem;
         border: 1px solid $color-gray-4D;
@@ -108,12 +107,13 @@
 // IMAGE
 .form-image {
     display: grid;
-    grid-template-rows: [title-s] 1fr [title-e image-s] 13.7rem [image-s];
+    grid-template-rows: [title-s] 1fr [title-e image-s] 13.7rem [image-e];
     grid-template-columns: [s] 16rem [e];
-    
+
     & > * {
         grid-column: s/e;
     }
+
     &__title {
         @include red-title;
         margin-bottom: 2rem;
@@ -138,14 +138,11 @@
         font-size: 1.4rem;
         line-height: 1.7rem;
         text-align: center;
-    
+
         color: $color-red-BA;
         grid-row: image-s/image-e;
 
         justify-self: center;
         align-self: center;
-
-
-
     }
 }

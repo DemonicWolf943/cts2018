@@ -1,40 +1,38 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-import NewNewsletterForm from './newsletterNewForm';
+import NewNewsletterForm from "./newsletterNewForm";
 
 class EditNewsletter extends Component {
+  onSubmit = fields => {
+    // if(button == 'submit') {
+    //   // save new newsletter on the backend. perform a post request here.
+    //   console.log('trying to submit to backend.');
+    // }
+    this.props.history.push("/dashboard");
+  };
 
-    onSubmit = (fields) => {
+  onCancel = () => {
+    this.props.history.push("/dashboard");
+  };
 
-        // if(button == 'submit') {
-        //   // save new newsletter on the backend. perform a post request here.
-        //   console.log('trying to submit to backend.');
-        // } 
-        this.props.history.push('/dashboard')
-    }
+  componentDidMount() {
+      this.props.fetchNewsletterWithId(this.props.match.params.id);
+  }
 
-    onCancel = () => {
-        this.props.history.push('/dashboard')
-    }
-
-    componentDidMount() {
-        this.props.fetchNewsletterWithId(this.props.match.params.id);
-    }
-
-    render() {
-        return (
-            <div className='new-newsletter'>
-                <NewNewsletterForm 
-                    newsletterToEdit={this.props.newsletterToEdit}
-                    onCancel={() => this.onCancel()} 
-                    onSubmit={(event) => this.onSubmit(event)}
-                    formTitle='Edit Newsletter'
-                />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="new-newsletter">
+        <NewNewsletterForm
+          newsletterToEdit={this.props.newsletterToEdit}
+          onCancel={() => this.onCancel()}
+          onSubmit={event => this.onSubmit(event)}
+          formTitle='Edit Newsletter'
+        />
+      </div>
+    );
+  }
 }
 
 function mapStateToProps(state) {
